@@ -1,0 +1,33 @@
+:root{
+    --primary-color: rgb(3, 42, 7);
+    --secondary-color: rgb(1, 24, 7);
+}
+
+.AppNav{
+    background: url('../../../public/forest.jpg');
+    padding: 24px;
+    display: flex;
+   
+    
+}
+
+.AppNavTitle{
+    color: aliceblue;
+    font-size: 24px;
+    text-decoration: none;
+    
+}
+.AppNavTitle:not(:last-child){
+    margin-right: 16px;
+}
+
+.AppNavTitle:not(:first-child){
+    margin-right: 404px;
+}
+
+.AppLogo{
+font-family: Pacifico;
+font-weight: 900;
+font-size: 92px;
+color: aliceblue;
+}
