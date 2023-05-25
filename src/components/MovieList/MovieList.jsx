@@ -13,13 +13,13 @@ const MovieList = ({ movieList }) => {
         {movieList.map(({ id, title, name, original_title, poster_path }) => (
           <li key={id} className={css.MovieListItem}>
             <Link to={`/movies/${id}`} state={{ from: location }} className={css.MovieListLink}>
-              <>
+              
                 <img
                   src={img_path + poster_path}
                   alt={original_title || name}
                   className={css.MovieListImg}
                 />
-              </>
+              
               <p className={css.MovieListTitle}>{title || name}</p>
             </Link>
           </li>

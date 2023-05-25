@@ -19,8 +19,8 @@ export const getMovies = async (page = 1) => {
     };
 
     try {
-        const { data } = await axios.get(`trending/all/day`, config);
-        return data;
+        const response = await axios.get(`trending/all/day`, config);
+        return response.data;
     } catch (error) {
         alert('Something went wrong!!!')
     }
@@ -28,3 +28,12 @@ export const getMovies = async (page = 1) => {
 
    
 };
+
+export async function getMovieDetails(movieId) {
+    try {
+      const response = await axios.get(`movie/${movieId}`);
+      return response.data;
+    } catch (error) {
+      alert(error.message);
+    }
+  }

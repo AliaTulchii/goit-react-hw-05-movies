@@ -1,46 +1,44 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { getMovies } from "services/api";
 import MovieList from "components/MovieList/MovieList";
+import LoadMore from "components/Button/Button";
+// import Loader from "components/Loader/Loader";
 
-
-
-// let key = '&api_key=34c43bf884421ce859303b56578677a3';
-// let base_url = 'https://api.themoviedb.org/3';
-
-// let url= base_url+'/discover/movie?sort_by=popularity.desc'+key;
 
 const Home = () => {
     const [movieData, setMovieData] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [activePage, setActivePage] = useState(1);
-    // const [url_set, setUrl] = useState(url);
+    const [showLoadMore, setShowLoadMore] = useState(false);
+    const [page, setPage] = useState(1);
+    
 
 
 
     useEffect(() => {
-      
-        getMovies(activePage)
+        
+        getMovies(page)
             .then(({ results }) => {
                 console.log(results);
-                setMovieData(prev => [...prev, ...results])
-                    .finally(setLoading(true));
-            })
+                setMovieData(prev => [...prev, ...results]);
+                
+            }).finally(()=> setShowLoadMore(true));
+            
         
-    }, [activePage]);
+    }, [page]);
 
+    const onBtnClick = page => {
+        setPage(page);
+    }
 
-    return <div>
-        
+   
 
-        {movieData.map((movie) => {
             return (
                 <div>
-                    <MovieList movieList={movieData}/>
+                    <MovieList movieList={movieData} />                    
+                    {showLoadMore && <LoadMore loadMore={onBtnClick} />}
+                    
                 </div>
             )
-        })}
-    </div>
+     
 }
 
 export default Home;
