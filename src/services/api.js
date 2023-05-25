@@ -11,7 +11,7 @@ axios.defaults.params = {
 }
 
 
-export const getMovies = async (page = 1) => {
+export const getMoviesTrending = async (page = 1) => {
     const config = {
         params: {
             page: page,
@@ -23,7 +23,8 @@ export const getMovies = async (page = 1) => {
         return response.data;
     } catch (error) {
         alert('Something went wrong!!!')
-    }
+  }
+  
     
 
    
@@ -36,4 +37,55 @@ export async function getMovieDetails(movieId) {
     } catch (error) {
       alert(error.message);
     }
+}
+  
+
+export async function searchMovie(searchValue) {
+    const config = {
+      params: {
+        query: searchValue,
+        page: '1',
+      },
+    };
+  
+    try {
+      const response = await axios.get(`search/movie`, config);
+      return response.data;
+    } catch (error) {
+      alert(error.message);
+    }
+}
+  
+
+
+export async function getMovieCredits (movieId) {
+  const config = {
+    params: {},
+  };
+
+  try {
+    const response = await axios.get(`movie/${movieId}/credits`, config);
+
+    return response.data;
+  } catch (error) {
+    alert(error.message);
   }
+}
+
+
+
+export async function getMovieReviews(movieId) {
+  const config = {
+    params: {
+      page: 1,
+    },
+  };
+
+  try {
+    const response = await axios.get(`movie/${movieId}/reviews`, config);
+
+    return response.data;
+  } catch (error) {
+    alert(error.message);
+  }
+}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getMovies } from "services/api";
+import {  getMoviesTrending } from "services/api";
 import MovieList from "components/MovieList/MovieList";
 import LoadMore from "components/Button/Button";
 // import Loader from "components/Loader/Loader";
@@ -15,7 +15,7 @@ const Home = () => {
 
     useEffect(() => {
         
-        getMovies(page)
+        getMoviesTrending(page)
             .then(({ results }) => {
                 console.log(results);
                 setMovieData(prev => [...prev, ...results]);
@@ -33,6 +33,7 @@ const Home = () => {
 
             return (
                 <div>
+                    <h1 style={{color: 'white'}}>Popular today</h1>
                     <MovieList movieList={movieData} />                    
                     {showLoadMore && <LoadMore loadMore={onBtnClick} />}
                     

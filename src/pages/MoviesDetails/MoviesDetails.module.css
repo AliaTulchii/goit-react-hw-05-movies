@@ -1,0 +1,43 @@
+.MoviesDetails{
+    border-bottom: solid 1px white;
+}
+
+.MoviesDetailsTitle{
+    margin-left: 32px;
+    font-size: 48px;
+}
+
+.MoviesDetailsBox{
+    display: flex;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.MoviesDetailsImg{
+    margin: 24px;
+    height: 550px;
+}
+
+.MoviesDetailsAbout{
+    padding: 24px;
+    width: 750px;
+}
+
+.MoviesDetailsList{
+    padding-bottom: 16px;
+    list-style: none;
+    display: flex;
+    border-bottom: 1px solid white;
+
+}
+
+.MoviesDetailsItem{
+    margin-right: 24px;
+}
+
+.MoviesDetailsLink{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+
+}

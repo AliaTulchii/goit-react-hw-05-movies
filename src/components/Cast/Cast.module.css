@@ -1,0 +1,34 @@
+.Cast{
+    padding: 0 24px;
+    background: url(../../../public/forest.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.CastTitle{
+    font-size: 28px;
+    
+}
+
+.CastList{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 60px) / 3);
+    gap: 30px;
+   
+    
+}
+
+.CastItem{
+    width: 250px;
+    background-color: black;
+    
+    padding: 16px 0 16px 16px;
+}
+
+.CastImg{
+    height: 350px;    
+    width: 235px;
+}

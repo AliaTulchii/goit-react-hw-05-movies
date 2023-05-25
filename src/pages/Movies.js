@@ -1,11 +1,13 @@
 import { useEffect } from "react";
+// import MoviesDetails from "./MoviesDetails";
 
 const Movies = () => {
     useEffect(() => {
         
     },[])
-    return <div>
-    All movies
+    return <div style={{color: 'white'}}>
+        {/* <MoviesDetails/> */}
+        Movies
     </div>
 }
 

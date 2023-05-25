@@ -1,0 +1,16 @@
+.Reviews{
+    padding:  24px;
+    background: url(../../../public/forest.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ReviewsList{
+    list-style: none;
+}
+
+.ReviewsItem{
+    margin: 16px;
+    padding: 24px;
+    background-color: black;
+}
