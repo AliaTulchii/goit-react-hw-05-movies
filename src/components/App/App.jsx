@@ -2,7 +2,7 @@ import React from "react";
 import {  Route, Routes } from "react-router-dom";
 import css from '../App/App.module.css'
 import Home from '../../pages/Home'
-import Movies from "pages/Movies";
+import Movies from "pages/Movies/Movies";
 import MoviesDetails from "pages/MoviesDetails/MoviesDetails";
 import { Layout } from "components/Layout/Layout";
 import { Cast } from "components/Cast/Cast";

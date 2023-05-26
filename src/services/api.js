@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Notiflix from 'notiflix';
 
 const key = '34c43bf884421ce859303b56578677a3';
 const url = 'https://api.themoviedb.org/3';
@@ -11,7 +12,7 @@ axios.defaults.params = {
 }
 
 
-export const getMoviesTrending = async (page = 1) => {
+export const getMovies = async (page = 1) => {
     const config = {
         params: {
             page: page,
@@ -22,7 +23,7 @@ export const getMoviesTrending = async (page = 1) => {
         const response = await axios.get(`trending/all/day`, config);
         return response.data;
     } catch (error) {
-        alert('Something went wrong!!!')
+      Notiflix.Notify.failure('Something went wrong!!!')
   }
   
     
@@ -30,17 +31,37 @@ export const getMoviesTrending = async (page = 1) => {
    
 };
 
+
+export const getMoviesAll = async (page = 1) => {
+  const config = {
+      params: {
+          page: page,
+      }
+  };
+
+  try {
+      const response = await axios.get(`trending/movie/week`, config);
+      return response.data;
+  } catch (error) {
+    Notiflix.Notify.failure('Something went wrong!!!')
+}
+
+  
+
+ 
+};
+
 export async function getMovieDetails(movieId) {
     try {
       const response = await axios.get(`movie/${movieId}`);
       return response.data;
     } catch (error) {
-      alert(error.message);
+      Notiflix.Notify.failure(error.message);
     }
 }
   
 
-export async function searchMovie(searchValue) {
+export async function getSearchMovie (searchValue) {
     const config = {
       params: {
         query: searchValue,
@@ -52,13 +73,13 @@ export async function searchMovie(searchValue) {
       const response = await axios.get(`search/movie`, config);
       return response.data;
     } catch (error) {
-      alert(error.message);
+      Notiflix.Notify.failure(error.message);
     }
 }
   
 
 
-export async function getMovieCredits (movieId) {
+export async function getMovieCast (movieId) {
   const config = {
     params: {},
   };
@@ -68,7 +89,7 @@ export async function getMovieCredits (movieId) {
 
     return response.data;
   } catch (error) {
-    alert(error.message);
+    Notiflix.Notify.failure(error.message);
   }
 }
 
@@ -86,6 +107,6 @@ export async function getMovieReviews(movieId) {
 
     return response.data;
   } catch (error) {
-    alert(error.message);
+    Notiflix.Notify.failure(error.message);
   }
 }

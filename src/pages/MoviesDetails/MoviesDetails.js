@@ -43,7 +43,7 @@ const MoviesDetails = () => {
             <p>{movie.genres?.map(({ name }) => name).join(', ')}</p>
             
                 
-            <h4>Rating: <i>{movie.vote_average}</i></h4>
+            <h3>Rating: <i>{movie.vote_average}</i></h3>
             
             </div>
         

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom';
-import { getMovieCredits } from 'services/api';
+import { getMovieCast } from 'services/api';
 import css from './Cast.module.css';
 import drama from '../Image/mask.png';
 
@@ -13,7 +13,7 @@ export const Cast = () => {
     const [casts, setCasts] = useState([]);
 
     useEffect(() => {
-        getMovieCredits(movieId).then(({ cast }) => {
+        getMovieCast(movieId).then(({ cast }) => {
             setCasts(cast);
         })
     }, [movieId]);
