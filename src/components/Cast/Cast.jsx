@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom';
 import { getMovieCast } from 'services/api';
 import css from './Cast.module.css';
-import drama from '../Image/mask.png';
+import drama from '../Image/actor.svg';
 
 
 let img_path = 'https://image.tmdb.org/t/p/w500/';

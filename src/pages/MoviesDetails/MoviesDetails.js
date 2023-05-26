@@ -2,6 +2,7 @@ import { Suspense, useEffect, useState } from "react";
 import { Link, Outlet,  useParams } from "react-router-dom";
 import { getMovieDetails } from "services/api";
 import css from './MoviesDetails.module.css';
+import drama from '../../components/Image/movie.svg';
 
 let img_path = 'https://image.tmdb.org/t/p/w500/';
 
@@ -28,7 +29,10 @@ const MoviesDetails = () => {
         <div className={css.MoviesDetailsBox}>
 
             <img
-                src={img_path + `${movie.poster_path}`}
+                src={
+                    movie.poster_path ? `${img_path}${movie.poster_path}` : drama
+                  }
+                // src={img_path + `${movie.poster_path}`}
                 alt=""
                 className={css.MoviesDetailsImg}
             />

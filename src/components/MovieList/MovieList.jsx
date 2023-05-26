@@ -1,7 +1,7 @@
 import React from 'react';
 import css from './MovieList.module.css'
 import { Link, useLocation } from 'react-router-dom';
-import drama from '../Image/mask.png';
+import drama from '../Image/movie.svg';
 
 let img_path = 'https://image.tmdb.org/t/p/w500/';
 
@@ -19,7 +19,6 @@ const MovieList = ({ movieList }) => {
                 src={
                   poster_path ? `${img_path}${poster_path}` : drama
                 }
-                  // src={img_path + poster_path}
                   alt={original_title || name}
                   className={css.MovieListImg}
                 />
