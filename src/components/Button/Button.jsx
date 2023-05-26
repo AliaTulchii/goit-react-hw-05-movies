@@ -1,17 +1,4 @@
-// import css from './Button.module.css'
-
-// function Button({loadMore}) {
-//     return (<button className={css.Button} onClick={loadMore}>
-//         Load more...
-//     </button>)
-// }
-
-// export default Button;
-
-
-
-
-
+import css from './Button.module.css'
 import React, { useState } from 'react';
 
 
@@ -23,8 +10,8 @@ const LoadMore = ({ loadMore }) => {
 
   return (
     <div>
-      <button className="btn" type="button" onClick={changePage}>
-        Load more...       
+      <button className={css.Buttn} type="button" onClick={changePage}>
+        Load more...      
       </button>
     </div>
   );

@@ -1,0 +1,18 @@
+.Buttn{
+    margin-left: 50%;
+    margin-bottom: 32px;
+    margin-top: 32px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 16px;
+    
+}
+
+.Buttn:hover,
+.Buttn:focus{
+    background-color: #CAFF45;
+    color: white;
+    box-shadow: -1px 0px 38px 5px rgba(202,255,69,0.65);
+}
