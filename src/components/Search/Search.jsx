@@ -8,6 +8,7 @@ import { BsSearchHeartFill } from 'react-icons/bs';
 
 const Search = ({ onSubmit }) => {
   const [query, setQuery] = useState('');
+  
 
 
   const handleChange = e => {
