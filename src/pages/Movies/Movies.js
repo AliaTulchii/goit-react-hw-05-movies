@@ -12,11 +12,12 @@ const Movies = () => {
     const [movieData, setMovieData] = useState([]);
     const [isEmpty, setIsEmpty] = useState(false); 
     const [searchParams, setSearchParams] = useSearchParams();
-    const query = searchParams.get('query') ?? '';
-    const page = searchParams.get('page') ?? 1;
+    const query = searchParams.get('query');
+    
+    
 
     const onSubmit = searchValue => {
-    setSearchParams({ query: searchValue, page: 1 });
+    setSearchParams({ query: searchValue});
     };
 
 
@@ -25,20 +26,19 @@ const Movies = () => {
             return;
         }
         
-        getSearchMovie(query, page)
+        getSearchMovie(query)
             .then(({ results }) => {
                 if (!results.length) {
                     setIsEmpty(true);
                     return;
                 }
                 setMovieData([...results]);
-            } );
+            });
             
         
-    }, [ query, page]);
+    }, [ query]);
 
    
-
    
 
             return (

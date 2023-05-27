@@ -24,42 +24,42 @@ const MoviesDetails = () => {
     
     
     return <div style={{color: "white"}} >
-        <h1 className={css.MoviesDetailsTitle}>Movie Details of {movie.title}</h1>
+                <h1 className={css.MoviesDetailsTitle}>Movie Details of {movie.title}</h1>
 
-        <div className={css.MoviesDetailsBox}>
+                <div className={css.MoviesDetailsBox}>
 
-            <img
-                src={
-                    movie.poster_path ? `${img_path}${movie.poster_path}` : drama
-                  }
-                // src={img_path + `${movie.poster_path}`}
-                alt=""
-                className={css.MoviesDetailsImg}
-            />
-        
-            <div className={css.MoviesDetailsAbout}>
-            <h2>{movie.title}</h2>
+                    <img
+                        src={
+                            movie.poster_path ? `${img_path}${movie.poster_path}` : drama
+                        }
+                        // src={img_path + `${movie.poster_path}`}
+                        alt=""
+                        className={css.MoviesDetailsImg}
+                    />
+                
+                    <div className={css.MoviesDetailsAbout}>
+                    <h2>{movie.title}</h2>
 
-            <h3>Overview</h3>
-            <p>{movie.overview}</p>
+                    <h3>Overview</h3>
+                    <p>{movie.overview}</p>
 
-            <h3>Genres:</h3>
-            <p>{movie.genres?.map(({ name }) => name).join(', ')}</p>
+                    <h3>Genres:</h3>
+                    <p>{movie.genres?.map(({ name }) => name).join(', ')}</p>
             
                 
-            <h3>Rating: <i>{movie.vote_average}</i></h3>
+                    <h3>Rating: <i>{movie.vote_average}</i></h3>
             
+                </div>
+        
+        
             </div>
-        
-        
-        </div>
 
         <ul className={css.MoviesDetailsList}>
             <li className={css.MoviesDetailsItem}>
                 <Link to={`cast`} className={css.MoviesDetailsLink}>Cast</Link>
             </li>
             <li>
-            <Link to={`reviews`}  className={css.MoviesDetailsLink}>Reviews</Link>
+                <Link to={`reviews`}  className={css.MoviesDetailsLink}>Reviews</Link>
             </li>
         </ul>
 

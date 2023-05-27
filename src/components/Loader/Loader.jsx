@@ -4,17 +4,17 @@ import css from './Loader.module.css'
 
  const Loader = () => {
     return <div className={css.Backdrop}>
-        <BallTriangle
-  height={100}
-  width={100}
-  radius={5}
-  color="#080d2e"
-  ariaLabel="ball-triangle-loading"
-  wrapperClass={{}}
-  wrapperStyle=""
-  visible={true}
-/>
-    </div>
+                <BallTriangle
+                    height={100}
+                    width={100}
+                    radius={5}
+                    color="#080d2e"
+                    ariaLabel="ball-triangle-loading"
+                    wrapperClass={{}}
+                    wrapperStyle=""
+                    visible={true}
+                />
+            </div>
 }
 
 export default Loader;

@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import Notiflix from 'notiflix';
 import css from './Search.module.css'
 import { BsSearchHeartFill } from 'react-icons/bs';
-// import { toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const Search = ({ onSubmit }) => {
@@ -21,16 +20,7 @@ const Search = ({ onSubmit }) => {
 
     if (!query) {
       Notiflix.Notify.warning('Enter what movie are you looking for!')
-      // toast.error('Enter what movie you are looking for!', {
-      //   position: "top-right",
-      //   autoClose: 5000,
-      //   hideProgressBar: false,
-      //   closeOnClick: true,
-      //   pauseOnHover: true,
-      //   draggable: true,
-      //   progress: undefined,
-      //   theme: "colored",
-      //     });
+      
       return;
     }
 

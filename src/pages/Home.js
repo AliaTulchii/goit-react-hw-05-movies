@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { getMovies } from "services/api";
 import MovieList from "components/MovieList/MovieList";
-import LoadMore from "components/Button/Button";
-// import Loader from "components/Loader/Loader";
+import LoadMore from "components/LoadMore/LoadMore";
+
 
 
 const Home = () => {

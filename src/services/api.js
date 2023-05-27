@@ -20,7 +20,7 @@ export const getMovies = async (page = 1) => {
     };
 
     try {
-        const response = await axios.get(`trending/all/day`, config);
+        const response = await axios.get(`trending/movie/day`, config);
         return response.data;
     } catch (error) {
       Notiflix.Notify.failure('Something went wrong!!!')

@@ -22,10 +22,12 @@ const Reviews = () => {
             {reviews.map((review, index) => {
               return (
                   <li key={index} className={css.ReviewsItem}>
-                    <h4 className={css.ReviewsTitle}>Author: <span className={css.ReviewsAuthor}>{review.author}</span></h4>
+                    <h4 className={css.ReviewsTitle}>Author:
+                      <span className={css.ReviewsAuthor}>{review.author}</span>
+                    </h4>
                     <p className="description">{review.content}</p>
       
-                </li>
+                  </li>
               );
             })}
           </ul>
