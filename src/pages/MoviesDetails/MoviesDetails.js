@@ -2,7 +2,7 @@ import { Suspense, useEffect, useState } from "react";
 import { Link, Outlet,  useParams } from "react-router-dom";
 import { getMovieDetails } from "services/api";
 import css from './MoviesDetails.module.css';
-import drama from '../../components/Image/movie.svg';
+import drama from '../../Image/actor.svg';
 
 let img_path = 'https://image.tmdb.org/t/p/w500/';
 

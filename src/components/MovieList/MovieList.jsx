@@ -1,7 +1,7 @@
 import React from 'react';
 import css from './MovieList.module.css'
 import { Link, useLocation } from 'react-router-dom';
-import drama from '../Image/movie.svg';
+import drama from '../../Image/movie.svg';
 
 let img_path = 'https://image.tmdb.org/t/p/w500/';
 

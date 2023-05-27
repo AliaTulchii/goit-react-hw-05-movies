@@ -4,7 +4,7 @@ import MovieList from "components/MovieList/MovieList";
 import Search from "components/Search/Search";
 import { getSearchMovie } from '../../services/api'
 import css from './Movies.module.css';
-import drama from '../../components/Image/drama-masks.svg'
+import drama from '../../Image/drama-masks.svg'
 
 
 
